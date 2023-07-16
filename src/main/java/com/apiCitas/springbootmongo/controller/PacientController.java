@@ -26,7 +26,7 @@ public class PacientController {
         return this.services.findAllPacients();
     }
 
-    @GetMapping("{/pacientId}")
+    @GetMapping("/{pacientId}")
     public Pacient getPacient(@PathVariable String pacientId){
         return  services.getPacientById(pacientId);
     }
