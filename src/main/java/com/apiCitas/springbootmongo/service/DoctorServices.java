@@ -20,10 +20,12 @@ public class DoctorServices {
     }
 
     public List<Doctor> findAllDoctors(){
+
         return this.repository.findAll();
     }
 
     public Doctor getDoctorById(String doctorId){
+
         return this.repository.findById(doctorId).get();
     }
 

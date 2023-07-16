@@ -18,16 +18,19 @@ public class DoctorController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Doctor createdDoctor(@RequestBody Doctor doctor){
+
         return  services.addDoctor(doctor);
     }
 
     @GetMapping
     public List<Doctor> getDoctors(){
+
         return  services.findAllDoctors();
     }
 
     @GetMapping("/{doctorId}")
     public Doctor getDoctor(@PathVariable String doctorId){
+
         return services.getDoctorById(doctorId);
     }
 
@@ -38,6 +41,7 @@ public class DoctorController {
 
     @DeleteMapping("/{doctorId}")
     public String deletedDoctor(@PathVariable String doctorId){
+
         return services.deleteDoctor(doctorId);
     }
 }
